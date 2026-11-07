@@ -1,0 +1,847 @@
+1.<!DOCTYPE html> ---->Tells browser which version of html code which is weitern in the browser latest version 5
+2.<html lang="en">...</html>---->Tells content of the website is in English
+3.<head>...</head>---->it consist of 
+ a.<meta charset="UTF-8">---it ensure that characters that use are using is displayed correctly. ex emojis, symbols ects
+ b.<title>..</title>
+4. <body>...</body>--->content of the website like links images headings
+5.HTML headings
+
+<h1>Main Heading</h1>
+<h2>Sub Heading</h2>
+<h3>Section Heading</h3>
+<h4>Subsection Heading</h4>
+<h5>Minor Heading</h5>
+<h6>Smallest Heading</h6>
+
+6.Paragrah elements
+<p>wellcome to html</p>
+<p>Html is used to creat web pages</p>
+7.Self-Closeing tags 
+Self-closing tags are HTML elements that do not have a closing tag because they do not contain any content.
+a.<br> or <br/> ----> line break
+b.<hr>----->horizontal rule
+c.<image src="image.jpj" alt="Image">
+d.<input input="text">
+e.<meta charset="UTF=8>
+f.<link ref="dtylesheet" href="style.css">
+8.html list elements
+1. Ordered List (<ol>)
+
+<ol>
+ <li>HTML</li>
+ <li>CSS</li>
+ <li>javaScript</li>
+</ol>
+output:
+1.HTM
+2. CSS
+3. JavaScript
+
+
+2. Unordered List (<ul>)
+
+Used when the order of items does not matter.
+
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+
+Output:
+
+Apple
+Banana
+Mango
+
+3. DISCRIPTION LIST <dl>
+<dl>
+<dt>HTML</dt>
+<dd>HyperText Markup Language</dd>
+
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+
+Note:
+<dl> = Description List container
+<dt> = Term (name)
+<dd> = Description (meaning/explanation)
+
+HTML
+   HyperText Markup Language
+CSS
+   Cascading Style Sheets
+
+9. HTML Anchor Element (<a>)
+________________________________
+
+The anchor element is used to create links (hyperlinks) in HTML.
+<a href="URL">link text </a>
+<a> = Anchor tag
+href = Hyperlink reference (destination address)
+
+Example:
+<a href="https://www.google.com">Visit Google</a>
+
+Types of Links
+1. External Link (another website)
+<a href="https://www.wikipedia.org">Wikipedia</a>
+
+2. Internal Link (same website page)
+<a href="about.html">About Page</a>
+
+10. image tag
+1.Basic Syntax
+ <img src="image.jpg" alt="Description">
+<img> = Image tag (self-closing / void element)
+src = Source (path of the image)
+alt = Alternative text (shown if image fails or for accessibility)
+2. Image from Same Folder
+
+If image is in the same folder as HTML file:
+
+project/
+ ├── index.html
+ └── image.jpg
+
+<img src="image.jpg" alt="My Image">
+3. Image from Subfolder
+
+If image is inside a folder:
+project/
+ ├── index.html
+ └── images/
+      └── photo.jpg
+<img src="images/photo.jpg" alt="Photo">
+4. Image from Parent Folder
+
+If HTML file is inside a folder and image is outside:
+
+project/
+ ├── image.jpg
+ └── pages/
+      └── index.html
+<img src="../image.jpg" alt="Image">
+
+5. Image from External URL
+<img src="https://example.com/photo.jpg" alt="Online Image">
+
+10. HTML <div> Tag
+________________________
+The <div> tag is a container element used to group other HTML elements together.
+
+
+Stylesheet Languages
+_____________________
+
+A stylesheet language is used to control the presentation and appearance of HTML
+
+Common Stylesheet Languages:
+________________________________________________________________________________________________________________________
+ 
+  CSS
+_________________________________________________________________________________________________________________
+CSS - Cascading Style Sheets
+
+Its a language that we help us specify how the page should look like
+
+
+1. CSS (Cascading Style Sheets)
+We can do styling of web pages using css
+
+How To use Css in HTML
+____________________
+1. Inline CSS
+Example 1:
+
+<h1 style="color: blue;">Welcome</h1>
+
+Example 2:
+
+<html lang="en" style="background-color: rgb(3, 3, 15);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 style="color: blue;">Welcome</h1>
+</body>
+</html>
+
+2. Internal CSS
+Syntax:
+
+<head>
+    <style>
+        selector {
+            property: value;
+            property: value;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background: black;
+        }
+        h1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <h1>Welcome</h1>
+</body>
+
+3. External CSS
+
+CSS is written in a separate .css file and linked to the HTML document. Best for large websites. Reusable across multiple pages
+
+Add in head:
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <h1>Welcome</h1>
+</body>
+</html>
+
+Note:
+rel: relationship
+href: provides the location of the file
+
+create style.css
+h1 {
+  color: green;
+}
+
+____________________
+Element Selectors
+___________________
+
+Example 1:
+index.html
+------------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <h1>Red</h1>
+   <h1>Blue</h1>
+   <h1>Green</h1>
+</body>
+</html>
+
+style.css
+----------
+h1{
+    color: brown;
+}
+
+_______________
+Class Selector
+________________
+Example 1:
+
+index.html
+---------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <h1 class="red-class">Red</h1>
+   <h1 class="blue-class">Blue</h1>
+   <h1 class="green-class">Green</h1>
+</body>
+</html>
+
+style.css
+---------
+.red-class{
+    color: brown;
+}
+
+.blue-class{
+    color: blue;
+}
+
+.green-class{
+    color: green;
+}
+
+Example 2:
+index.html
+-----------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <h1 class="myClass">Red</h1>
+   <p class="myClass">Hello World</p>
+</body>
+</html>
+
+
+style.css
+----------
+.myClass {
+    color: blue;
+}
+
+____________________
+
+.green-class{
+    color: green;
+}
+
+Example 2:
+index.html
+-----------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <h1 class="myClass">Red</h1>
+   <p class="myClass">Hello World</p>
+</body>
+</html>
+
+
+style.css
+----------
+.myClass {
+    color: blue;
+}
+
+____________________
+Id Selector
+____________________
+
+An ID selector is used to apply CSS styles to one unique HTML element. Ensure to keep id as unique for each html elements
+
+Basic Syntax:
+
+#idName {
+    property: value;
+}
+
+
+Example:
+style.css
+--------#header {
+    color: blue;
+}
+
+index.html
+-----------
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head><body>
+   <h1 id="header">Welcome</h1>
+   <h2 >Welcome</h2>
+</body>
+</html>______________________
+Attribute Selector in CSS
+_______________________
+
+An attribute selector is used to select HTML elements based on their attributes or attribute values.
+
+Basic Syntax:
+[attribute] {
+    property: value;
+}
+
+Example 1:
+index.html
+----------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <input type="text" name="name">
+   <input type="password" name="password">
+</body>
+</html>
+
+style.css
+---------
+[type]{
+    color: blue;
+}
+
+or
+
+input[type]{
+    color: blue;
+}
+
+Example 2:
+----------
+index.html
+----------
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <input type="text" name="name">
+   <input type="password" name="password">
+</body>
+</html>
+
+style.css
+---------
+[type="text"]{
+    color: blue;
+}
+
+[type="password"]{
+    color: red;
+}
+
+or
+
+
+input[type="text"]{
+    color: blue;
+}
+
+input[type="password"]{
+    color: red;
+}
+
+__________________________
+Universal Selector in CSS
+__________________________
+
+The universal selector selects all HTML elements on a webpage.
+
+Basic Syntax:
+
+* {
+    property: value;
+}
+
+* (asterisk) is the universal selector.
+It applies the specified styles to every element.
+
+Example
+
+index.html
+-----------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+    <div>Content</div>
+</body>
+
+</html>Style.css
+---------
+* {
+    color: blue;
+}
+
+
+CSS Properties
+--------------
+
+_________________
+Css Color
+_________________
+
+CSS provides several color properties that let you control the appearance of text, backgrounds, borders, and more. Here’s a clear breakdown of the most important ones:
+
+Note: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color
+
+Note: https://colorhunt.co/
+
+We can use above websites to select colors
+
+Link for all colours
+
+Example:
+
+style.css
+---------
+html{
+    background-color: red;
+}
+h1{
+    color: blue;
+}
+or use hex code
+
+h1{
+    color: #FBF5A7;
+}
+
+note: background-color -- applied complete html page
+color: to apply color on text
+
+index.html
+----------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <h1>some text</h1>
+
+</body>
+</html>
+
+Font Size:
+
+How to set font size?
+
+1 px = 1/96th inch = 0.26mm (width and height)
+
+So for, 20px = 20*0.26 = 5.2 mm (width and height)
+
+
+also we can set the font as 1 pt(point)
+
+1 pt-->1/72 inches = 0.35 mm
+so, 20 pt = 0.35*20 = 7.0 mm
+
+em is a relative unit. It means:
+
+1em = the current font size of the element's parent (for font-size).
+
+1em = parent's font size
+     = 20px
+
+2 em = parents font size*2
+
+Example:
+
+style.css
+
+html{
+    background-color: red;
+}
+div{
+    font-size: 20px;
+}
+
+p{
+    font-size: 2em;
+}
+
+index.html
+----------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="parent">
+        <p class="child">Hello</p>
+    </div>
+
+</body>
+
+</html>
+
+What is 1rem in CSS?
+
+rem stands for Root EM.
+
+1rem = font size of the root element (<html>)
+
+Default case
+
+Most browsers set:
+
+html {
+    font-size: 16px;
+}
+
+So:
+
+1rem = 16px
+
+Example 1
+
+html {
+    font-size: 16px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+Result:
+
+1rem = 16px
+
+So paragraph text = 16px.
+
+Example 2
+
+html {  font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+Calculation:
+
+2rem = 2 × 16px = 32px
+
+################################
+Note:
+If everything was fixed in px, then:
+
+A phone screen
+A laptop
+A 4K monitor
+
+would all show text the same size.
+
+That causes problems:
+
+Too small on big screens
+Too large on small screens
+so, we use em and rem
+##################################################
+
+❌ Problem: Using only px (fixed design)
+HTML
+<div class="container">
+    <h1>Welcome</h1>
+    <p>This is a paragraph.</p>
+    <button>Click Me</button>
+</div>
+
+CSS (bad approach)
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+🚨 What goes wrong?
+
+Now imagine user changes browser setting:
+
+“Increase default text size for better readability”
+
+OR uses zoom / accessibility settings.
+
+Result:
+Text becomes harder to scale consistently
+Buttons feel too small
+Spacing feels off
+You must manually adjust every value
+
+✅ Solution: Using rem (scalable design)
+CSS (good approach)
+
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;   /* 32px */
+}
+
+p {
+    font-size: 1rem;   /* 16px */
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+}
+🔥 Now the magic part
+
+If we change just ONE line:
+
+html {
+    font-size: 20px;
+}
+Everything scales automatically:
+Element	Before	After
+1rem text	16px	20px
+h1 (2rem)	32px	40px
+button text	16px	20px
+padding	scaled	scaled
+📱 Why this is powerful
+
+Now your UI:
+
+Now your UI:
+
+adjusts for mobile users
+supports accessibility settings
+scales consistently everywhere
+requires no redesign
+
+
+##############################
+More About Device pixels
+#############################
+
+-> Device pixel = Total number of pixel in the screen
+Example: 6 inches screen has 1800 pixels
+
+-> Pixel per Inch = How dense the pixel are in 1 inch
+
+example:
+ppi = total screen pixels / screen size
+
+Example: ppi = 1800/6 = 300 pixels
+
+More pixels per inch means more sharp images
+
+Note: CSS pixel is font size in browser.
+
+Depending on the screen size font size automatically gets adjusted.
+
+The viewport is the visible area of a web page on your screen.
+
+In simple terms:
+👉 It is the part of the page you can see without scrolling.
+
+🖥️ Example
+
+When you open a website:
+
+Your screen shows only a portion of the page
+That visible portion = viewport
+
+If you scroll down, the viewport changes.
+
+👉 The viewport is the visible area of the web page inside the browser window.
+
+And yes:
+
+vw = viewport width (1% of visible width)
+vh = viewport height (1% of visible height)
+
+So when the browser size changes:
+✔ vw and vh automatically adjust
+✔ Layout becomes responsive
+
+Note:
+
+font-size:
+a. Applies only to text
+b. Controls how big letters appear
+
+Viewport (screen-related)
+Viewport = visible browser area
+
+Then we use:
+
+vw → % of viewport width
+vh → % of viewport height
+
+Example:
+
+style.css
+----
+div{
+    background-color: blue;
+    width: 50vw;
+    height: 50vh;
+    font-size: 30px;
+}
+index.html
+------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>Full Screen Section</div>
+</body>
+</html>
+
