@@ -1,6 +1,6 @@
 HTML Notes
 _____________________
-notes
+notes edit for test
 1. <!DOCTYPE html> ----> 
 a. Tells browser which version of html the code is written in. 
 b. The latest version of html is 5
